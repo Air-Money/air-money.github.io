@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: default
 title: Quickstart Guide
 nav_order: 2
@@ -216,33 +216,4 @@ After successful submission, complete the store listing:
 
 Your dApp will be reviewed by the Airmoney team before being published to the store.
 
-## Development Tools
-
-### Simulator Controls
-
-The Airmoney Simulator supports keyboard controls that mimic the hardware device:
-
-| Key | Function |
-|-----|----------|
-| `←` (Left Arrow) | Left button |
-| `→` (Right Arrow) | Right button |
-| `↑` (Up Arrow, hold) | Balance button |
-| `↓` (Down Arrow) | Mute toggle |
-| `Enter` | Rotary knob press |
-| `[` | Clockwise rotary rotation |
-| `]` | Counter-clockwise rotary rotation |
-
-### Best Practices
-
-- **Testing:** Always test your dApp thoroughly in the simulator before submission
-- **Performance:** Optimize your application for the hardware constraints
-- **User Experience:** Design with the device's unique interface in mind
-- **Security:** Follow security best practices for blockchain applications
-- **Documentation:** Provide clear user documentation for your dApp
-
-## Next Steps
-
-- Explore the [API Documentation](/api-reference) for advanced features
-- Join our [Developer Community](/community) for support and collaboration
-- Check out [Sample Projects](/examples) for inspiration
-- Review [Publishing Guidelines](/publishing) for store requirements
+ -->

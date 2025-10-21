@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: default
 title: Controller SDK
 nav_order: 3
@@ -446,6 +446,20 @@ try {
 }
 ```
 
+## Simulator Controls
+
+The Airmoney Simulator supports keyboard controls that mimic the hardware device:
+
+| Key | Function |
+|-----|----------|
+| `←` (Left Arrow) | Left button |
+| `→` (Right Arrow) | Right button |
+| `↑` (Up Arrow, hold) | Balance button |
+| `↓` (Down Arrow) | Mute toggle |
+| `Enter` | Rotary knob press |
+| `[` | Clockwise rotary rotation |
+| `]` | Counter-clockwise rotary rotation |
+
 ## Best Practices
 
 ### 1. Key Event Management
@@ -534,13 +548,4 @@ try {
 | `subscribe(config)` | Subscribe to key events | `AMKeyEventTriggerGroupConfig` |
 | `unsubscribe(id)` | Unsubscribe from events | `string` |
 | `unsubscribeAll()` | Unsubscribe from all events | None |
-| `destroy()` | Clean up manager | None |
-
-
-## License
-
-MIT © AirMoney
-
-## Support
-
-For support and questions, please refer to the [Quickstart Guide](/quickstart) or contact the AirMoney development team.
+| `destroy()` | Clean up manager | None | -->
