@@ -123,13 +123,13 @@ Comprehensive cryptographic operations for multiple blockchain networks.
 #### EVM (Ethereum Virtual Machine) Operations
 
 ```typescript
-import { AirMoneyCryptoService, isAMCryptoServiceSuccessResponse } from '@airmoney-degn/controller-sdk';
+import { AirMoneyCryptoService, isAMServiceSuccessResponse } from '@airmoney-degn/controller-sdk';
 
 const cryptoService = new AirMoneyCryptoService();
 
 // Get default EVM wallet
 const walletResponse = await cryptoService.getDefaultEvmWallet();
-if (isAMCryptoServiceSuccessResponse(walletResponse)) {
+if (isAMServiceSuccessResponse(walletResponse)) {
   console.log('Default wallet address:', walletResponse.result.address);
 }
 
@@ -178,7 +178,7 @@ const verifyResponse = await cryptoService.verifyEip1271Signature({
 ```typescript
 // Get default Solana wallet
 const walletResponse = await cryptoService.getDefaultSvmWallet();
-if (isAMCryptoServiceSuccessResponse(walletResponse)) {
+if (isAMServiceSuccessResponse(walletResponse)) {
   console.log('Default wallet address:', walletResponse.result.address);
 }
 
@@ -200,7 +200,7 @@ const transactionResponse = await cryptoService.signSolanaTransaction({
 ```typescript
 // Get default Bitcoin wallet
 const walletResponse = await cryptoService.getDefaultBitcoinWallet();
-if (isAMCryptoServiceSuccessResponse(walletResponse)) {
+if (isAMServiceSuccessResponse(walletResponse)) {
   console.log('Default wallet address:', walletResponse.result.address);
 }
 
@@ -373,7 +373,7 @@ The SDK provides robust error handling with type guards:
 
 ```typescript
 import { 
-  isAMCryptoServiceSuccessResponse,
+  isAMServiceSuccessResponse,
   isAMServiceErrorResponse 
 } from '@airmoney-degn/controller-sdk';
 
@@ -383,7 +383,7 @@ try {
     message: 'Hello'
   });
 
-  if (isAMCryptoServiceSuccessResponse(response)) {
+  if (isAMServiceSuccessResponse(response)) {
     console.log('Signature:', response.result.signature);
   } else {
     console.error('Error:', response.error.message);
