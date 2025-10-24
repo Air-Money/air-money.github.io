@@ -113,10 +113,18 @@ After project creation, update the `metadata.json` file with your application de
 
 **Key Configuration Fields:**
 
-- `identifier`: Must be unique across the platform (reverse domain notation recommended)
+- `name`: Application name
 - `displayName`: User-facing name in the dApp store
+- `identifier`: Must be unique across the platform (reverse domain notation recommended)
+- `author`: Developer name
+- `maintainer`: Maintainer name
+- `url`: Project URL
 - `themeColor`: Primary color for your application's theme
 - `version`: Semantic versioning (e.g., 1.0.0)
+- `whatsNew`: Description of what's new in this version
+- `buildNumber`: Build number for this release
+- `commitHash`: Git commit hash
+- `buildDate`: Build date
 
 ## Development Workflow
 
@@ -205,6 +213,15 @@ airmoney-cli serve -f dist
 ```
 
 **Important:** When using HMR, configure your development server to use a specific port to avoid conflicts with the simulator's WebSocket connection.
+
+**Simulator Controls:**
+- `←` (Left Arrow) - Left button
+- `→` (Right Arrow) - Right button  
+- `↑` (Up Arrow, hold) - Balance button
+- `↓` (Down Arrow) - Mute toggle
+- `Enter` - Rotary knob press
+- `[` - Clockwise rotary rotation
+- `]` - Counter-clockwise rotary rotation
 
 Example Vite configuration:
 
