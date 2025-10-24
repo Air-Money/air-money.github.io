@@ -21,8 +21,6 @@ The AirMoney Service supports optional throttling for display operations:
 - Throttling is applied per screen (left/right) independently
 - The default exported `airmoneyService` instance has throttling enabled (40ms)
 
-**Note**: All JSON-RPC requests use automatically generated IDs via `new Date().getTime().toString()` and responses return the ID as a number.
-
 ## Display Images
 
 Display static images on device screens.
