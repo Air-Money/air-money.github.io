@@ -9,7 +9,7 @@ url: "https://air-money.github.io" # the base hostname & protocol for your site,
 baseurl: ""
 
 # Theme
-theme: "just-the-docs"
+remote_theme: "just-the-docs/just-the-docs"
 
 # Just the Docs options
 search_enabled: true
