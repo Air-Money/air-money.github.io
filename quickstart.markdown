@@ -90,6 +90,10 @@ This command will:
 - Install necessary dependencies
 - Configure build tools
 
+**Additional Resources:**
+Check out community repos for additional templates and examples:
+- [degn-template](https://github.com/cream-hub/degn-template)
+
 #### Project Configuration
 
 After project creation, update the `metadata.json` file with your application details:
@@ -155,6 +159,25 @@ Key features:
 - Custom hooks for device integration
 - State management utilities
 - Tailwind CSS styling with custom theming
+
+### Wallet Interactions
+
+For applications that need to interact with wallets (generate, sign transactions, etc.), you can direct users to the native account app on the device:
+
+```typescript
+import { goToApp } from '@airmoney-degn/controller-sdk';
+
+// Navigate to the account app for wallet operations
+goToApp('account-app');
+```
+
+The account app is a native application on the AirMoney device that provides:
+- Wallet generation and management
+- Transaction signing
+- Address management
+- Security features
+
+This approach ensures users can perform wallet operations using the device's secure native interface.
 
 ### Building Your Application
 
