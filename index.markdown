@@ -1,7 +1,8 @@
 ---
 layout: home
-# title: Air Money Documentation
+title: Air Money Documentation
 description: Build powerful applications for Air Money devices
+nav_exclude: true
 ---
 
 # Welcome to Air Money
