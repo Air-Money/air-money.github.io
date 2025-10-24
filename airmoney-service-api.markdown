@@ -13,6 +13,16 @@ This guide provides direct API integration methods for AirMoney device services.
 
 - **AirMoney Service**: `http://localhost:4040`
 
+## Service Behavior
+
+The AirMoney Service supports optional throttling for display operations:
+- Throttling can be configured when creating a service instance
+- When enabled, only the last call within the throttle window is executed
+- Throttling is applied per screen (left/right) independently
+- The default exported `airmoneyService` instance has throttling enabled (40ms)
+
+**Note**: All JSON-RPC requests use automatically generated IDs via `new Date().getTime().toString()` and responses return the ID as a number.
+
 ## Display Images
 
 Display static images on device screens.
@@ -25,7 +35,7 @@ Display static images on device screens.
   "jsonrpc": "2.0",
   "method": "setImage",
   "params": ["app-name/assets/images/welcome.png", "left"],
-  "id": "1"
+  "id": "1703123456789"
 }
 ```
 
@@ -33,7 +43,7 @@ Display static images on device screens.
 ```json
 {
   "jsonrpc": "2.0",
-  "id": "1",
+  "id": 1703123456789,
   "result": {
     "status": "success",
     "message": "Image displayed successfully"
@@ -57,7 +67,7 @@ Display animated GIFs on device screens.
   "jsonrpc": "2.0",
   "method": "setAnimate",
   "params": ["app-name/assets/animations/loading.gif", "right"],
-  "id": "2"
+  "id": "1703123456790"
 }
 ```
 
@@ -65,7 +75,7 @@ Display animated GIFs on device screens.
 ```json
 {
   "jsonrpc": "2.0",
-  "id": "2",
+  "id": 1703123456790,
   "result": {
     "status": "success",
     "message": "Animation displayed successfully"
@@ -81,10 +91,10 @@ All JSON-RPC responses follow this structure:
 ```json
 {
   "jsonrpc": "2.0",
-  "id": "request-id",
+  "id": 1703123456789,
   "result": {
     "status": "success",
-    "data": "response-data"
+    "message": "response-data"
   }
 }
 ```
@@ -93,7 +103,7 @@ All JSON-RPC responses follow this structure:
 ```json
 {
   "jsonrpc": "2.0",
-  "id": "request-id",
+  "id": 1703123456789,
   "error": {
     "code": -32601,
     "message": "Method not found"
