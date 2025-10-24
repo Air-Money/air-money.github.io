@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout: default
 title: Quickstart Guide
 nav_order: 2
@@ -84,6 +84,7 @@ airmoney-cli create -N my-awesome-dapp --template
 ```
 
 This command will:
+
 - Clone the official quickstart repository
 - Set up the project structure
 - Install necessary dependencies
@@ -111,6 +112,7 @@ After project creation, update the `metadata.json` file with your application de
 ```
 
 **Key Configuration Fields:**
+
 - `identifier`: Must be unique across the platform (reverse domain notation recommended)
 - `displayName`: User-facing name in the dApp store
 - `themeColor`: Primary color for your application's theme
@@ -118,9 +120,38 @@ After project creation, update the `metadata.json` file with your application de
 
 ## Development Workflow
 
+### Development Tools
+
+**Controller SDK**
+The AirMoney Controller SDK provides TypeScript APIs for device control and blockchain operations:
+
+```bash
+npm install @airmoney-degn/controller-sdk
+```
+
+Key features:
+- Device screen control and image display
+- Cryptographic operations (EVM, Solana, Bitcoin)
+- Key event handling and button management
+- Utility functions for navigation and validation
+
+**React UI Library**
+A comprehensive React UI library with pre-built components and hooks:
+
+```bash
+npm install @airmoney-degn/react-ui
+```
+
+Key features:
+- Pre-built UI components (Keyboard, Layout, Forms)
+- Custom hooks for device integration
+- State management utilities
+- Tailwind CSS styling with custom theming
+
 ### Building Your Application
 
 1. Install project dependencies:
+
    ```bash
    npm install
    ```
@@ -132,30 +163,45 @@ After project creation, update the `metadata.json` file with your application de
 
 The build process compiles and bundles your application into a single HTML file, optimized for the Airmoney hardware platform. The output is stored in the `dist` directory.
 
+#### Expected Output Structure
+
+After building your application, the `dist` directory should contain at minimum the following structure:
+
+```
+dist/
+├── assets/           # Static assets (CSS, JS, images, button images)
+├── dapp-logo.png     # Application logo/icon
+├── index.html        # Main application file
+└── metadata.json     # Application metadata
+```
+
+**Required Files:**
+
+- `index.html`: Your compiled application - this is the main entry point
+- `metadata.json`: Contains application configuration and metadata
+- `dapp-logo.png`: Your application's icon (recommended size: 512x512px)
+- `assets/`: Directory containing all bundled CSS, JavaScript, static resources, and button images for the simulator
+
+> **Note:** This structure shows the minimum required files. Your application folder can contain additional files and directories as needed for your specific dApp functionality.
+
 ### Local Development with Simulator
 
 The Airmoney Simulator is a powerful development tool that replicates the hardware device behavior in your browser, enabling rapid iteration and testing.
 
-#### Basic Simulator Usage
+#### Development Setup
 
-Serve a pre-built application:
-
-```bash
-npm run serve
-```
-
-Or using the CLI directly:
-
-```bash
-airmoney-cli serve -f dist
-```
-
-#### Advanced Development Setup
-
-For active development with Hot Module Replacement (HMR):
+For active development with Hot Module Replacement (HMR), use the `--app-url` option:
 
 ```bash
 airmoney-cli serve -u http://localhost:5173
+```
+
+#### Preview your app
+
+Preview your built application in the simulator:
+
+```bash
+airmoney-cli serve -f dist
 ```
 
 **Important:** When using HMR, configure your development server to use a specific port to avoid conflicts with the simulator's WebSocket connection.
@@ -165,9 +211,9 @@ Example Vite configuration:
 ```javascript
 export default {
   server: {
-    hmr: { port: 5173 }
-  }
-}
+    hmr: { port: 5173 },
+  },
+};
 ```
 
 #### Simulator Command Reference
@@ -178,10 +224,8 @@ Usage: airmoney-cli serve [options]
 Serve locally in the simulator
 
 Options:
-  -p, --port <number>            Port (default: "4040")
   -f, --index-app-path <string>  Path for the index.html (default: "./")
   --no-browser                   Prevent browser from opening automatically
-  -i, --button-image <string>    Path for custom button images (default: "assets")
   -u, --app-url <string>         URL where the app is running (for HMR)
   -h, --help                     Display help for command
 ```
@@ -215,5 +259,3 @@ After successful submission, complete the store listing:
 5. Review and click **Sign and Submit** to finalize the submission
 
 Your dApp will be reviewed by the Airmoney team before being published to the store.
-
- -->

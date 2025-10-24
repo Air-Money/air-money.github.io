@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout: default
 title: Controller SDK
 nav_order: 3
@@ -32,24 +32,7 @@ Ensure your project has a `metadata.json` file in the root directory. The SDK wi
 - **Development**: File should be in your project root directory
 - **Production**: File should be in the root of your built/distribution folder
 
-The file structure should be:
-
-```json
-{
-  "name": "my-awesome-dapp",
-  "identifier": "com.yourcompany.my-awesome-dapp",
-  "displayName": "My Awesome dApp",
-  "version": "1.0.0",
-  "author": "Your Name",
-  "maintainer": "Your Name",
-  "url": "https://github.com/yourusername/my-awesome-dapp",
-  "themeColor": "#C4C4C4",
-  "whatsNew": "Initial release",
-  "buildNumber": "1",
-  "commitHash": "",
-  "buildDate": ""
-}
-```
+> **Note:** For detailed metadata.json configuration, see the [AirMoney CLI Tool](airmoney-cli.html#create-command) documentation.
 
 The SDK will use the `name` field from this file to identify your application when making requests to the AirMoney device.
 
@@ -384,42 +367,6 @@ const normalizedTx = normalizeEVMTransaction({
 });
 ```
 
-## Type Safety
-
-The SDK provides comprehensive TypeScript support with detailed type definitions:
-
-```typescript
-import type { 
-  AMKey,
-  AMKeyEventConfig,
-  EVMTransaction,
-  AMServiceScreenResponse,
-  AMCryptoServiceEvmMessageResponse
-} from '@airmoney-degn/controller-sdk';
-
-// Type-safe key handling
-const handleKeyPress = (key: AMKey) => {
-  switch (key) {
-    case AMKey.LeftButton:
-      // Handle left button
-      break;
-    case AMKey.RightButton:
-      // Handle right button
-      break;
-    // ... other cases
-  }
-};
-
-// Type-safe service responses
-const handleServiceResponse = (response: AMServiceScreenResponse) => {
-  if ('result' in response) {
-    console.log('Success:', response.result.message);
-  } else {
-    console.error('Error:', response.error.message);
-  }
-};
-```
-
 ## Error Handling
 
 The SDK provides robust error handling with type guards:
@@ -446,100 +393,31 @@ try {
 }
 ```
 
-## Simulator Controls
-
-The Airmoney Simulator supports keyboard controls that mimic the hardware device:
-
-| Key | Function |
-|-----|----------|
-| `←` (Left Arrow) | Left button |
-| `→` (Right Arrow) | Right button |
-| `↑` (Up Arrow, hold) | Balance button |
-| `↓` (Down Arrow) | Mute toggle |
-| `Enter` | Rotary knob press |
-| `[` | Clockwise rotary rotation |
-| `]` | Counter-clockwise rotary rotation |
-
-## Best Practices
-
-### 1. Key Event Management
-
-Use the manager for complex key event handling:
-
-```typescript
-const manager = new AirMoneyKeyEventManager({ instance: keyEvent });
-
-// Subscribe to events
-const listenerId = manager.subscribe({
-  name: 'MyGroup',
-  priority: 10,
-  triggers: [/* your triggers */]
-});
-
-// Clean up when component unmounts
-manager.destroy();
-```
-
-### 2. Error Handling
-
-Always check response types and use error wrappers for cleaner error handling:
-
-```typescript
-import { 
-  isAMCryptoServiceSuccessResponse,
-  errorWrapper,
-  cryptoServiceErrorWrapper 
-} from '@airmoney-degn/controller-sdk';
-
-// Method 1: Manual response checking
-const response = await cryptoService.signEvmMessage(params);
-if (isAMCryptoServiceSuccessResponse(response)) {
-  // Handle success
-  console.log('Signature:', response.result.signature);
-} else {
-  // Handle error
-  console.error('Error:', response.error.message);
-}
-
-// Method 2: Using error wrapper (throws on error)
-const wrappedSignMessage = cryptoServiceErrorWrapper(cryptoService.signEvmMessage);
-try {
-  const result = await wrappedSignMessage(params);
-  console.log('Signature:', result.result.signature);
-} catch (error) {
-  console.error('Service error:', error.message);
-}
-```
-
-
 ## API Reference
 
 ### AirMoneyService Methods
 
 | Method | Description | Parameters |
 |--------|-------------|------------|
-| `setImage` | Display static image | `{ id: AMServiceScreen.Left \| AMServiceScreen.Right, imageName: string }` (path relative to /assets) |
-| `setAnimate` | Display animated GIF | `{ id: AMServiceScreen.Left \| AMServiceScreen.Right, imageName: string }` (path relative to /assets) |
+| `setImage(params)` | Display static image | `{ id: AMServiceScreen.Left \| AMServiceScreen.Right, imageName: string }` (path relative to /assets) |
+| `setAnimate(params)` | Display animated GIF | `{ id: AMServiceScreen.Left \| AMServiceScreen.Right, imageName: string }` (path relative to /assets) |
 
 ### AirMoneyCryptoService Methods
 
-#### EVM Methods
-- `getDefaultEvmWallet()` - Get default EVM wallet address
-- `signEvmMessage(params)` - Sign EVM message
-- `signEvmTransaction(params)` - Sign EVM transaction
-- `signEip712TypedData(params)` - Sign EIP-712 typed data
-- `verifyEip1271Signature(params)` - Verify EIP-1271 signature
-
-#### Solana Methods
-- `getDefaultSvmWallet()` - Get default Solana wallet address
-- `signSolanaMessage(params)` - Sign Solana message
-- `signSolanaTransaction(params)` - Sign Solana transaction
-
-#### Bitcoin Methods
-- `getDefaultBitcoinWallet()` - Get default Bitcoin wallet address
-- `signBitcoinMessage(params)` - Sign Bitcoin message
-- `verifyBitcoinSignature(params)` - Verify Bitcoin signature
-- `signBitcoinTransaction(params)` - Sign Bitcoin transaction
+| Method | Description | Parameters |
+|--------|-------------|------------|
+| `getDefaultEvmWallet()` | Get default EVM wallet address | None |
+| `signEvmMessage(params)` | Sign EVM message | `{ address: string, message: string }` |
+| `signEvmTransaction(params)` | Sign EVM transaction | `{ address: string, transaction: object, chainId: string }` |
+| `signEip712TypedData(params)` | Sign EIP-712 typed data | `{ address: string, typedData: object }` |
+| `verifyEip1271Signature(params)` | Verify EIP-1271 signature | `{ rpcUrl: string, contractAddress: string, message: string, signature: string }` |
+| `getDefaultSvmWallet()` | Get default Solana wallet address | None |
+| `signSolanaMessage(params)` | Sign Solana message | `{ address: string, message: string }` |
+| `signSolanaTransaction(params)` | Sign Solana transaction | `{ address: string, transaction_base64: string }` |
+| `getDefaultBitcoinWallet()` | Get default Bitcoin wallet address | None |
+| `signBitcoinMessage(params)` | Sign Bitcoin message | `{ address: string, message: string }` |
+| `verifyBitcoinSignature(params)` | Verify Bitcoin signature | `{ address: string, message: string, signature: string }` |
+| `signBitcoinTransaction(params)` | Sign Bitcoin transaction | `{ address: string, psbt_base64: string, sighash_type: string }` |
 
 ### AirMoneyKeyEventManager Methods
 
@@ -548,4 +426,4 @@ try {
 | `subscribe(config)` | Subscribe to key events | `AMKeyEventTriggerGroupConfig` |
 | `unsubscribe(id)` | Unsubscribe from events | `string` |
 | `unsubscribeAll()` | Unsubscribe from all events | None |
-| `destroy()` | Clean up manager | None | -->
+| `destroy()` | Clean up manager | None |

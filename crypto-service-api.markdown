@@ -1,87 +1,21 @@
 ---
 layout: default
-title: AirMoney API Reference
-nav_order: 5
-description: API integration for AirMoney services
+title: Crypto Service API
+nav_order: 7
+description: API for blockchain operations including EVM, Solana, and Bitcoin
 ---
 
-# AirMoney API Reference
+# Crypto Service API
 
-This guide provides direct API integration methods for developers who prefer to interact with AirMoney services without using the controller SDK. All services communicate via JSON-RPC 2.0 protocol over HTTP.
+This guide provides direct API integration methods for blockchain operations. The Crypto Service handles wallet management, message signing, and transaction signing for EVM-compatible chains, Solana, and Bitcoin via JSON-RPC 2.0 protocol over HTTP.
 
-## Base URLs
+## Base URL
 
-- **AirMoney Service**: `http://localhost:4040`
 - **Crypto Service**: `http://localhost:5050`
 
+## EVM Operations
 
-## AirMoney Service API
-
-### Display Images
-
-Display static images on device screens.
-
-**Endpoint**: `POST http://localhost:4040`
-
-**Request**:
-```json
-{
-  "jsonrpc": "2.0",
-  "method": "setImage",
-  "params": ["app-name/assets/images/welcome.png", "left"],
-  "id": "1"
-}
-```
-
-**Response**:
-```json
-{
-  "jsonrpc": "2.0",
-  "id": "1",
-  "result": {
-    "status": "success",
-    "message": "Image displayed successfully"
-  }
-}
-```
-
-**Parameters**:
-- `imagePath`: Full path to image relative to app assets (`app-name/assets/path/to/image.png`)
-- `screen`: Screen identifier (`"left"` or `"right"`)
-
-### Display Animations
-
-Display animated GIFs on device screens.
-
-**Endpoint**: `POST http://localhost:4040`
-
-**Request**:
-```json
-{
-  "jsonrpc": "2.0",
-  "method": "setAnimate",
-  "params": ["app-name/assets/animations/loading.gif", "right"],
-  "id": "2"
-}
-```
-
-**Response**:
-```json
-{
-  "jsonrpc": "2.0",
-  "id": "2",
-  "result": {
-    "status": "success",
-    "message": "Animation displayed successfully"
-  }
-}
-```
-
-## Crypto Service API
-
-### EVM Operations
-
-#### Get Default EVM Wallet
+### Get Default EVM Wallet
 
 **Endpoint**: `POST http://localhost:5050`
 
@@ -107,7 +41,7 @@ Display animated GIFs on device screens.
 }
 ```
 
-#### Sign EVM Message
+### Sign EVM Message
 
 **Endpoint**: `POST http://localhost:5050`
 
@@ -134,7 +68,7 @@ Display animated GIFs on device screens.
 }
 ```
 
-#### Sign EVM Transaction
+### Sign EVM Transaction
 
 **Endpoint**: `POST http://localhost:5050`
 
@@ -169,7 +103,7 @@ Display animated GIFs on device screens.
 }
 ```
 
-#### Sign EIP-712 Typed Data
+### Sign EIP-712 Typed Data
 
 **Endpoint**: `POST http://localhost:5050`
 
@@ -207,9 +141,9 @@ Display animated GIFs on device screens.
 }
 ```
 
-### Solana Operations
+## Solana Operations
 
-#### Get Default Solana Wallet
+### Get Default Solana Wallet
 
 **Endpoint**: `POST http://localhost:5050`
 
@@ -235,7 +169,7 @@ Display animated GIFs on device screens.
 }
 ```
 
-#### Sign Solana Message
+### Sign Solana Message
 
 **Endpoint**: `POST http://localhost:5050`
 
@@ -262,7 +196,7 @@ Display animated GIFs on device screens.
 }
 ```
 
-#### Sign Solana Transaction
+### Sign Solana Transaction
 
 **Endpoint**: `POST http://localhost:5050`
 
@@ -293,9 +227,9 @@ Display animated GIFs on device screens.
 }
 ```
 
-### Bitcoin Operations
+## Bitcoin Operations
 
-#### Get Default Bitcoin Wallet
+### Get Default Bitcoin Wallet
 
 **Endpoint**: `POST http://localhost:5050`
 
@@ -321,7 +255,7 @@ Display animated GIFs on device screens.
 }
 ```
 
-#### Sign Bitcoin Message
+### Sign Bitcoin Message
 
 **Endpoint**: `POST http://localhost:5050`
 
@@ -347,7 +281,6 @@ Display animated GIFs on device screens.
   }
 }
 ```
-
 
 ## Error Handling
 
