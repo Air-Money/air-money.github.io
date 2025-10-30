@@ -31,15 +31,15 @@ Powerful command-line interface for project management, deployment, and developm
 
 [CLI Documentation →](airmoney-cli.html){: .btn .btn-outline}
 
-### React UI Components
-Pre-built, customizable React components designed specifically for DEGN applications.
-
-[UI Library →](react-ui.html){: .btn .btn-outline}
-
 ### Controller SDK
 TypeScript SDK for integrating DEGN services into your applications with full type safety.
 
 [Controller SDK →](controller-sdk.html){: .btn .btn-outline}
+
+### React UI Components
+Pre-built, customizable React components designed specifically for DEGN applications.
+
+[UI Library →](react-ui.html){: .btn .btn-outline}
 
 ## 🔧 Services & APIs
 

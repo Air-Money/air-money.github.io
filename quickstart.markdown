@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quickstart Guide
-nav_order: 2
+nav_order: 1
 description: Get started with Airmoney development in minutes
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Crypto Service API
-nav_order: 7
+nav_order: 6
 description: API for blockchain operations including EVM, Solana, and Bitcoin
 ---
 

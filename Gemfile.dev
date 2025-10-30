@@ -2,6 +2,9 @@ source "https://rubygems.org"
 # Development Gemfile - uses just-the-docs gem for local development
 # This avoids SSL issues when fetching remote themes locally
 
+# BUNDLE_GEMFILE=Gemfile.dev bundle install
+# BUNDLE_GEMFILE=Gemfile.dev bundle exec jekyll serve --livereload --config _config.yml,_config.dev.yml
+
 # Use Jekyll directly for development
 gem "jekyll", "~> 4.4.1"
 

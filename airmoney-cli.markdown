@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AirMoney CLI Tool
-nav_order: 3
+nav_order: 2
 description: Complete guide to the AirMoney command-line interface for dApp development
 ---
 

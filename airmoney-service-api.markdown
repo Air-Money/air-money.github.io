@@ -1,7 +1,7 @@
 ---
 layout: default
 title: AirMoney Service API
-nav_order: 6
+nav_order: 5
 description: API for AirMoney device display and interaction services
 ---
 
