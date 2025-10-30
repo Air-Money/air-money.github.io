@@ -87,10 +87,14 @@ airmoney-cli create -N my-awesome-dapp
 ```bash
 # Create a basic project
 airmoney-cli create -N my-dapp
+```
 
+```bash
 # Create with template (recommended for beginners)
 airmoney-cli create -N my-dapp --template
+```
 
+```bash
 # Create in a specific folder
 airmoney-cli create -N my-dapp -f /path/to/my-projects
 ```
