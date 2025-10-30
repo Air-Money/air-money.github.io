@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quickstart Guide
-nav_order: 2
+nav_order: 1
 description: Get started with Airmoney development in minutes
 ---
 
@@ -43,7 +43,7 @@ airmoney-cli --version
 
 ### Step 3: Developer Registration
 
-1. Navigate to the [Airmoney Developer Dashboard](https://dash-devnet.air.fun/)
+1. Navigate to the <a href="https://dash-devnet.air.fun/" target="_blank" rel="noopener">Airmoney Developer Dashboard</a>
 2. Connect your browser wallet to authenticate
 3. Complete the developer profile registration
 4. Generate your API key from the dashboard
@@ -92,7 +92,7 @@ This command will:
 
 **Additional Resources:**
 Check out community repos for additional templates and examples:
-- [degn-template](https://github.com/cream-hub/degn-template)
+- <a href="https://github.com/cream-hub/degn-template" target="_blank" rel="noopener">degn-template</a>
 
 #### Project Configuration
 
@@ -135,7 +135,7 @@ After project creation, update the `metadata.json` file with your application de
 ### Development Tools
 
 **Controller SDK**
-The AirMoney Controller SDK provides TypeScript APIs for device control and blockchain operations:
+The DEGN Controller SDK provides TypeScript APIs for device control and blockchain operations:
 
 ```bash
 npm install @airmoney-degn/controller-sdk
@@ -171,7 +171,7 @@ import { goToApp } from '@airmoney-degn/controller-sdk';
 goToApp('account-app');
 ```
 
-The account app is a native application on the AirMoney device that provides:
+The account app is a native application on the DEGN device that provides:
 - Wallet generation and management
 - Transaction signing
 - Address management
@@ -237,14 +237,9 @@ airmoney-cli serve -f dist
 
 **Important:** When using HMR, configure your development server to use a specific port to avoid conflicts with the simulator's WebSocket connection.
 
-**Simulator Controls:**
-- `←` (Left Arrow) - Left button
-- `→` (Right Arrow) - Right button  
-- `↑` (Up Arrow, hold) - Balance button
-- `↓` (Down Arrow) - Mute toggle
-- `Enter` - Rotary knob press
-- `[` - Clockwise rotary rotation
-- `]` - Counter-clockwise rotary rotation
+For the full simulator key mappings and shortcuts, see the DEGN CLI page under Serve Command:
+
+- [DEGN CLI — Serve Command](/degn-cli#serve-command)
 
 Example Vite configuration:
 
@@ -292,7 +287,7 @@ airmoney-cli upload -f dist
 
 After successful submission, complete the store listing:
 
-1. Navigate to the [Developer Dashboard](https://dash-devnet.air.fun/)
+1. Navigate to the <a href="https://dash-devnet.air.fun/" target="_blank" rel="noopener">Developer Dashboard</a>
 2. Locate your submitted package
 3. Select the appropriate category for your dApp
 4. Click **Register Dapp** to create the store listing
