@@ -39,7 +39,7 @@ TypeScript SDK for integrating DEGN services into your applications with full ty
 ### React UI Components
 Pre-built, customizable React components designed specifically for DEGN applications.
 
-[UI Library →](react-ui.html){: .btn .btn-outline}
+[UI Library →](react-ui-library.html){: .btn .btn-outline}
 
 ## 🔧 Services & APIs
 
