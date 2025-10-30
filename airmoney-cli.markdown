@@ -50,7 +50,7 @@ You should see the current version number (e.g., `0.13.2`).
 
 Before you can use the CLI, you need to set up your developer credentials:
 
-1. **Get your developer credentials** from the [DEGN Developer Dashboard](https://dash-devnet.air.fun/)
+1. **Get your developer credentials** from the <a href="https://dash-devnet.air.fun/" target="_blank" rel="noopener">DEGN Developer Dashboard</a>
 2. **Run the setup command** with your details:
 
 ```bash

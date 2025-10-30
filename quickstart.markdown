@@ -43,7 +43,7 @@ airmoney-cli --version
 
 ### Step 3: Developer Registration
 
-1. Navigate to the [Airmoney Developer Dashboard](https://dash-devnet.air.fun/)
+1. Navigate to the <a href="https://dash-devnet.air.fun/" target="_blank" rel="noopener">Airmoney Developer Dashboard</a>
 2. Connect your browser wallet to authenticate
 3. Complete the developer profile registration
 4. Generate your API key from the dashboard
@@ -92,7 +92,7 @@ This command will:
 
 **Additional Resources:**
 Check out community repos for additional templates and examples:
-- [degn-template](https://github.com/cream-hub/degn-template)
+- <a href="https://github.com/cream-hub/degn-template" target="_blank" rel="noopener">degn-template</a>
 
 #### Project Configuration
 
@@ -292,7 +292,7 @@ airmoney-cli upload -f dist
 
 After successful submission, complete the store listing:
 
-1. Navigate to the [Developer Dashboard](https://dash-devnet.air.fun/)
+1. Navigate to the <a href="https://dash-devnet.air.fun/" target="_blank" rel="noopener">Developer Dashboard</a>
 2. Locate your submitted package
 3. Select the appropriate category for your dApp
 4. Click **Register Dapp** to create the store listing
