@@ -32,7 +32,7 @@ Ensure your project has a `metadata.json` file in the root directory. The SDK wi
 - **Development**: File should be in your project root directory
 - **Production**: File should be in the root of your built/distribution folder
 
-> **Note:** For detailed metadata.json configuration, see the [DEGN CLI](airmoney-cli.html#create-command) documentation.
+> **Note:** For detailed metadata.json configuration, see the [DEGN CLI](degn-cli.html#create-command) documentation.
 
 The SDK will use the `name` field from this file to identify your application when making requests to the DEGN device.
 

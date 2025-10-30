@@ -29,7 +29,7 @@ Get up and running in minutes with our comprehensive quickstart guide:
 ### DEGN CLI
 Powerful command-line interface for project management, deployment, and development workflows.
 
-[CLI Documentation →](airmoney-cli.html){: .btn .btn-outline}
+[CLI Documentation →](degn-cli.html){: .btn .btn-outline}
 
 ### Controller SDK
 TypeScript SDK for integrating DEGN services into your applications with full type safety.
