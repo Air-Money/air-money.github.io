@@ -9,6 +9,8 @@ description: API for blockchain operations including EVM, Solana, and Bitcoin
 
 This guide provides direct API integration methods for blockchain operations. The Crypto Service handles wallet management, message signing, and transaction signing for EVM-compatible chains, Solana, and Bitcoin via JSON-RPC 2.0 protocol over HTTP.
 
+> Note: On a physical device, AirMoney/Crypto services run as system daemons. For local development, the CLI provides these services to the simulator to emulate device behavior on your computer. Ensure the following ports are free before starting the simulator: 4041, 4040 (DEGN Service), and 5050 (Crypto Service).
+
 ## Base URL
 
 - **Crypto Service**: `http://localhost:5050`
