@@ -1,21 +1,21 @@
 ---
 layout: default
-title: AirMoney Service API
+title: DEGN Service API
 nav_order: 5
-description: API for AirMoney device display and interaction services
+description: API for DEGN device display and interaction services
 ---
 
-# AirMoney Service API
+# DEGN Service API
 
-This guide provides direct API integration methods for AirMoney device services. The AirMoney Service handles display operations, animations, and device interactions via JSON-RPC 2.0 protocol over HTTP.
+This guide provides direct API integration methods for DEGN device services. The DEGN Service handles display operations, animations, and device interactions via JSON-RPC 2.0 protocol over HTTP.
 
 ## Base URL
 
-- **AirMoney Service**: `http://localhost:4040`
+- **DEGN Service**: `http://localhost:4040`
 
 ## Service Behavior
 
-The AirMoney Service supports optional throttling for display operations:
+The DEGN Service supports optional throttling for display operations:
 - Throttling can be configured when creating a service instance
 - When enabled, only the last call within the throttle window is executed
 - Throttling is applied per screen (left/right) independently

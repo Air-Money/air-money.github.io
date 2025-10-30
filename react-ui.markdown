@@ -2,12 +2,12 @@
 layout: default
 title: React UI Library
 nav_order: 4
-description: Comprehensive React UI library for AirMoney applications
+description: Comprehensive React UI library for DEGN applications
 ---
 
-# AirMoney React UI Library
+# DEGN React UI Library
 
-A comprehensive React UI library built with TypeScript, providing reusable components, hooks, and utilities for the AirMoney application ecosystem. This library is designed for external developers to easily integrate AirMoney's UI components into their applications.
+A comprehensive React UI library built with TypeScript, providing reusable components, hooks, and utilities for the DEGN application ecosystem. This library is designed for external developers to easily integrate DEGN's UI components into their applications.
 
 ## Installation
 
@@ -21,7 +21,7 @@ pnpm add @airmoney-degn/react-ui
 
 ## Prerequisites
 
-The React UI library requires the AirMoney Controller SDK as a peer dependency:
+The React UI library requires the DEGN Controller SDK as a peer dependency:
 
 ```bash
 npm install @airmoney-degn/controller-sdk
@@ -31,14 +31,14 @@ npm install @airmoney-degn/controller-sdk
 
 ### AirMoneyModule
 
-The `AirMoneyModule` is a namespace that provides all AirMoney-specific functionality including components, hooks, and utilities for building AirMoney dApps.
+The `AirMoneyModule` is a namespace that provides all DEGN-specific functionality including components, hooks, and utilities for building DEGN dApps.
 
 **Components:**
 - `AirMoneyProvider` - Context provider component
 - `Layout` - Main application layout component  
 
 **Hooks:**
-- `useAirMoney` - Hook to access AirMoney context
+- `useAirMoney` - Hook to access DEGN context
 - `useBack` - Hook for back navigation management (AirMoneyModule version - no keyEventManager needed)
 - `useButton` - Hook for device button interactions (AirMoneyModule version - no keyEventManager needed)
 - `useKeyEventListener` - Hook for keyboard event subscription (AirMoneyModule version - no keyEventManager needed)
@@ -48,7 +48,7 @@ The `AirMoneyModule` is a namespace that provides all AirMoney-specific function
 **Utilities:**
 - `toast` - Utility function for creating toasts
 
-> **Note:** The AirMoneyModule versions of `useBack`, `useButton`, and `useKeyEventListener` automatically use the `keyEventManager` from the AirMoney context, so you don't need to pass it as a parameter. For general use outside of AirMoneyModule, import these hooks directly from `@airmoney-degn/react-ui` and pass the `keyEventManager` manually.
+> **Note:** The AirMoneyModule versions of `useBack`, `useButton`, and `useKeyEventListener` automatically use the `keyEventManager` from the DEGN context, so you don't need to pass it as a parameter. For general use outside of AirMoneyModule, import these hooks directly from `@airmoney-degn/react-ui` and pass the `keyEventManager` manually.
 
 **Example:**
 ```tsx
@@ -842,7 +842,7 @@ The library is fully typed with TypeScript. All components, hooks, and utilities
 
 ## Device Integration
 
-This library is designed to work with AirMoney's hardware devices. It includes:
+This library is designed to work with DEGN's hardware devices. It includes:
 
 - Device button handling
 - Key event management
@@ -855,7 +855,7 @@ This library is designed to work with AirMoney's hardware devices. It includes:
 
 | Component | Description | Key Props |
 |-----------|-------------|-----------|
-| `AirMoneyProvider` | Context provider for AirMoney functionality | `{ children: ReactNode, keyEventManager: AirMoneyKeyEventManager }` |
+| `AirMoneyProvider` | Context provider for DEGN functionality | `{ children: ReactNode, keyEventManager: AirMoneyKeyEventManager }` |
 | `Layout` | Main application layout with error boundaries and network checking | `{ children: ReactNode, debug?: boolean, version?: string, healthCheckUrls?: string \| string[] }` |
 | `Frame` | Main container that fits device screen dimensions | `{ children: ReactNode, debug?: boolean }` |
 | `CenteredFlex` | Flex container with centered content alignment | `{ children: ReactNode, className?: string }` |
@@ -876,7 +876,7 @@ This library is designed to work with AirMoney's hardware devices. It includes:
 
 | Hook | Description | Returns |
 |------|-------------|---------|
-| `useAirMoney` | Access AirMoney context | `{ shift: boolean \| undefined, setShift: (shift: boolean) => void, keyEventManager: AirMoneyKeyEventManager }` |
+| `useAirMoney` | Access DEGN context | `{ shift: boolean \| undefined, setShift: (shift: boolean) => void, keyEventManager: AirMoneyKeyEventManager }` |
 | `useBack` | Handle back navigation with key event management | `void` |
 | `useButton` | Handle device button interactions with image display | `{ setLeftButton: (imageName: string, fnConfig: FnInput) => void, setRightButton: (imageName: string, fnConfig: FnInput) => void, setBothButtons: (imageName: string, fnConfig: FnInput) => void }` |
 | `useKeyEventListener` | Listen to keyboard events with subscription management | `void` |

@@ -2,12 +2,12 @@
 layout: default
 title: Controller SDK
 nav_order: 3
-description: TypeScript SDK for AirMoney device control and blockchain operations
+description: TypeScript SDK for DEGN device control and blockchain operations
 ---
 
-# AirMoney Controller SDK
+# DEGN Controller SDK
 
-The AirMoney Controller SDK is a comprehensive TypeScript library that provides developers with powerful tools to interact with AirMoney devices. It offers functionality for device screen control, key event handling, and cryptographic operations.
+The DEGN Controller SDK is a comprehensive TypeScript library that provides developers with powerful tools to interact with DEGN devices. It offers functionality for device screen control, key event handling, and cryptographic operations.
 
 ## Installation
 
@@ -32,9 +32,9 @@ Ensure your project has a `metadata.json` file in the root directory. The SDK wi
 - **Development**: File should be in your project root directory
 - **Production**: File should be in the root of your built/distribution folder
 
-> **Note:** For detailed metadata.json configuration, see the [AirMoney CLI Tool](airmoney-cli.html#create-command) documentation.
+> **Note:** For detailed metadata.json configuration, see the [DEGN CLI](airmoney-cli.html#create-command) documentation.
 
-The SDK will use the `name` field from this file to identify your application when making requests to the AirMoney device.
+The SDK will use the `name` field from this file to identify your application when making requests to the DEGN device.
 
 ### Fallback Configuration
 

@@ -135,7 +135,7 @@ After project creation, update the `metadata.json` file with your application de
 ### Development Tools
 
 **Controller SDK**
-The AirMoney Controller SDK provides TypeScript APIs for device control and blockchain operations:
+The DEGN Controller SDK provides TypeScript APIs for device control and blockchain operations:
 
 ```bash
 npm install @airmoney-degn/controller-sdk
@@ -171,7 +171,7 @@ import { goToApp } from '@airmoney-degn/controller-sdk';
 goToApp('account-app');
 ```
 
-The account app is a native application on the AirMoney device that provides:
+The account app is a native application on the DEGN device that provides:
 - Wallet generation and management
 - Transaction signing
 - Address management

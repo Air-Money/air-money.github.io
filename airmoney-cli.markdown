@@ -1,13 +1,13 @@
 ---
 layout: default
-title: AirMoney CLI Tool
+title: DEGN CLI
 nav_order: 2
-description: Complete guide to the AirMoney command-line interface for dApp development
+description: Complete guide to the DEGN command-line interface for dApp development
 ---
 
-# AirMoney CLI Tool
+# DEGN CLI
 
-The AirMoney CLI is your all-in-one command-line tool for developing, testing, and publishing decentralized applications (dApps) on the AirMoney platform. It simplifies the entire development workflow from project creation to store publication.
+The DEGN CLI is your all-in-one command-line tool for developing, testing, and publishing decentralized applications (dApps) on the DEGN platform. It simplifies the entire development workflow from project creation to store publication.
 
 ## What You Can Do
 
@@ -15,7 +15,7 @@ The AirMoney CLI is your all-in-one command-line tool for developing, testing, a
 - **Create new dApp projects** from scratch or using templates
 - **Test your apps locally** with the built-in simulator
 - **Manage crypto wallets** for EVM, Solana, and Bitcoin
-- **Publish your dApps** to the AirMoney store
+- **Publish your dApps** to the DEGN store
 
 ## Installation
 
@@ -28,7 +28,7 @@ Before installing the CLI, make sure you have:
 
 ### Install the CLI
 
-Install the AirMoney CLI globally on your system:
+Install the DEGN CLI globally on your system:
 
 ```bash
 npm install -g @airmoney-degn/airmoney-cli
@@ -50,7 +50,7 @@ You should see the current version number (e.g., `0.13.2`).
 
 Before you can use the CLI, you need to set up your developer credentials:
 
-1. **Get your developer credentials** from the [AirMoney Developer Dashboard](https://dash-devnet.air.fun/)
+1. **Get your developer credentials** from the [DEGN Developer Dashboard](https://dash-devnet.air.fun/)
 2. **Run the setup command** with your details:
 
 ```bash
@@ -105,7 +105,7 @@ airmoney-cli serve
 ```
 
 This will:
-- Start the AirMoney simulator in your browser
+- Start the DEGN simulator in your browser
 - Serve your dApp locally for testing
 - Provide real-time development feedback
 
@@ -183,7 +183,7 @@ airmoney-cli serve [-f <path>] [--no-browser] [-u <url>]
 - `-u, --app-url <string>` - Use external development server URL
 
 **What it does:**
-- Starts the AirMoney simulator
+- Starts the DEGN simulator
 - Serves your dApp for testing
 - Provides device simulation (buttons, screens, etc.)
 - Supports hot reloading for development
@@ -199,7 +199,7 @@ airmoney-cli serve [-f <path>] [--no-browser] [-u <url>]
 
 ### Upload Command
 
-Publish your dApp to the AirMoney store:
+Publish your dApp to the DEGN store:
 
 ```bash
 airmoney-cli upload [-n <network>] [-f <path>] [-i <button-images>]
@@ -212,7 +212,7 @@ airmoney-cli upload [-n <network>] [-f <path>] [-i <button-images>]
 
 **What it does:**
 - Packages your dApp into a distributable format
-- Uploads to the AirMoney dApp store
+- Uploads to the DEGN dApp store
 - Provides upload confirmation and store link
 
 ### Wallet Commands
