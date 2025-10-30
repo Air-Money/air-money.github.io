@@ -9,7 +9,7 @@ description: API for DEGN device display and interaction services
 
 This guide provides direct API integration methods for DEGN device services. The DEGN Service handles display operations, animations, and device interactions via JSON-RPC 2.0 protocol over HTTP.
 
-> Note: On a physical device, DEGN/AirMoney services run as system daemons. For local development, the CLI spins up equivalent services alongside the simulator to emulate device behavior on your computer. Ensure the following ports are free before starting the simulator: 4041, 4040 (DEGN Service), and 5050 (Crypto Service).
+> Note: On a physical device, DEGN/Crypto services run as system daemons. For local development, the CLI spins up equivalent services alongside the simulator to emulate device behavior on your computer. Ensure the following ports are free before starting the simulator: 4041, 4040 (DEGN Service), and 5050 (Crypto Service).
 
 ## Base URL
 

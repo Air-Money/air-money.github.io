@@ -9,14 +9,6 @@ description: Complete guide to the DEGN command-line interface for dApp developm
 
 The DEGN CLI is your all-in-one command-line tool for developing, testing, and publishing decentralized applications (dApps) on the DEGN platform. It simplifies the entire development workflow from project creation to store publication.
 
-## What You Can Do
-
-- **Set up your development environment** with your developer credentials
-- **Create new dApp projects** from scratch or using templates
-- **Test your apps locally** with the built-in simulator
-- **Manage crypto wallets** for EVM, Solana, and Bitcoin
-- **Publish your dApps** to the DEGN store
-
 ## Installation
 
 ### Prerequisites
@@ -44,76 +36,20 @@ airmoney-cli --version
 
 You should see the current version number (e.g., `0.13.2`).
 
-## Getting Started
-
-### Step 1: Developer Setup
-
-Before you can use the CLI, you need to set up your developer credentials:
-
-1. **Get your developer credentials** from the <a href="https://dash-devnet.air.fun/" target="_blank" rel="noopener">DEGN Developer Dashboard</a>
-2. **Run the setup command** with your details:
-
-```bash
-airmoney-cli setup -u YOUR_WALLET_ADDRESS -k YOUR_API_KEY
-```
-
-**Options:**
-- `-u, --user <string>` - Your Solana wallet address (required)
-- `-k, --key <string>` - Your API key from the dashboard (required)
-- `-n, --network <string>` - Network: `devnet` or `mainnet` (default: `devnet`)
-
-**Example:**
-```bash
-airmoney-cli setup -u 9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM -k abc123def456 -n devnet
-```
-
-This creates a `.env` file in your system's config directory with your credentials.
-
-### Step 2: Create Your First Project
-
-Create a new dApp project:
-
-```bash
-airmoney-cli create -N my-awesome-dapp
-```
-
-**Options:**
-- `-N, --name <string>` - Project name (required)
-- `-n, --network <string>` - Network: `devnet` or `mainnet` (default: `devnet`)
-- `-f, --app-path <string>` - Custom folder path for the project
-- `--template` - Use the official quickstart template
-
-**Examples:**
-```bash
-# Create a basic project
-airmoney-cli create -N my-dapp
-```
-
-```bash
-# Create with template (recommended for beginners)
-airmoney-cli create -N my-dapp --template
-```
-
-```bash
-# Create in a specific folder
-airmoney-cli create -N my-dapp -f /path/to/my-projects
-```
-
-### Step 3: Test Your Project
-
-Navigate to your project folder and start the local simulator:
-
-```bash
-cd my-awesome-dapp
-airmoney-cli serve
-```
-
-This will:
-- Start the DEGN simulator in your browser
-- Serve your dApp locally for testing
-- Provide real-time development feedback
-
 ## Complete Command Reference
+
+### Demo Command
+
+Serve a ready-to-run demo app with hot reloading in the simulator:
+
+```bash
+airmoney-cli demo [-N <project-name>] [-f <path>]
+```
+
+What it does:
+- Clones the official quickstart template
+- Installs dependencies and starts the dev server
+- Launches the simulator pointed at `http://localhost:5173`
 
 ### Setup Command
 
@@ -133,7 +69,7 @@ airmoney-cli setup -u <wallet-address> -k <api-key> [-n <network>]
 Initialize a new dApp project:
 
 ```bash
-airmoney-cli create -N <project-name> [-n <network>] [-f <path>] [--template]
+airmoney-cli create -N <project-name> [-f <path>] [--template]
 ```
 
 **What it does:**
@@ -173,6 +109,21 @@ Your project's `metadata.json` file contains important configuration:
 }
 ```
 
+**Key Configuration Fields:**
+
+- `name`: Application name
+- `displayName`: User-facing name in the dApp store
+- `identifier`: Must be unique across the platform (reverse domain notation recommended)
+- `author`: Developer name
+- `maintainer`: Maintainer name
+- `url`: Project URL
+- `themeColor`: Primary color for your application's theme
+- `version`: Semantic versioning (e.g., 1.0.0)
+- `whatsNew`: Description of what's new in this version
+- `buildNumber`: Build number for this release
+- `commitHash`: Git commit hash
+- `buildDate`: Build date
+
 ### Serve Command
 
 Test your dApp locally with the simulator:
@@ -185,6 +136,8 @@ airmoney-cli serve [-f <path>] [--no-browser] [-u <url>]
 - `-f, --index-app-path <string>` - Path to your app files (default: `./`)
 - `--no-browser` - Don't open browser automatically
 - `-u, --app-url <string>` - Use external development server URL
+
+Note: `--index-app-path` and `--app-url` are mutually exclusive.
 
 **What it does:**
 - Starts the DEGN simulator
@@ -210,11 +163,11 @@ airmoney-cli serve [-f <path>] [--no-browser] [-u <url>]
 Publish your dApp to the DEGN store:
 
 ```bash
-airmoney-cli upload [-n <network>] [-f <path>] [-i <button-images>]
+airmoney-cli upload [-n <network-endpoint>] [-f <path>] [-i <button-images>]
 ```
 
 **Options:**
-- `-n, --network <string>` - Network endpoint (default: devnet)
+- `-n, --network <string>` - Network endpoint (default: `https://rpc-dev.air.fun`)
 - `-f, --index-app-path <string>` - Path to your app files (default: `./`)
 - `-i, --button-image <string>` - Path to button images (default: `assets`)
 

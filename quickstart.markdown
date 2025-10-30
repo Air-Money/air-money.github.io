@@ -11,158 +11,143 @@ Welcome to the DEGN development platform! This comprehensive guide will walk you
 
 ## Prerequisites
 
-Before you begin, ensure you have the following tools installed:
+Before you get started, ensure you have:
 
-- **Node.js and npm** - Required for package management and CLI tools
-- **Solana Wallet Extension** - Browser extension for wallet authentication
-- **Git** - For version control and template cloning
+- **Node.js and npm** – Required for package management and CLI tools
+- **Git** – For version control and template cloning
+- **DEGN CLI** – See [installation instructions](/degn-cli#installation) to install the DEGN CLI on your system.
+
+---
+
+## 🚀 Quick Demo: See DEGN in Action Instantly!
+
+Curious how a DEGN app looks and feels? Run this to launch a live demo-with no setup required:
+
+```bash
+airmoney-cli demo
+```
+
+This command will:
+- Create a working demo project from the official template
+- Install dependencies
+- Start the dev server
+- Open the simulator with hot reload
+
+For more demo options, see [DEGN CLI Demo Command](/degn-cli#demo-command).
+
+---
 
 ## Getting Started
 
-### Step 1: Request Developer Access
+**1. Developer Setup:**
 
-To access the DEGN development platform, you'll need to be whitelisted:
-
-1. Contact the DEGN team through our official channels
-2. Provide your Solana wallet address for whitelist verification
-3. Wait for confirmation of your developer access
-
-### Step 2: Install the DEGN CLI
-
-Install the official DEGN command-line interface globally:
+Get your developer credentials from the [DEGN Developer Dashboard](https://dash-devnet.air.fun/), then run:
 
 ```bash
-npm install -g @airmoney-degn/airmoney-cli
+airmoney-cli setup -u YOUR_WALLET_ADDRESS -k YOUR_API_KEY
 ```
+- `-u` Your wallet address
+- `-k` Your API key
 
-Verify the installation by checking the version:
+See [DEGN CLI — Setup Command](/degn-cli#setup-command) for all options.
 
-```bash
-airmoney-cli --version
-```
-
-### Step 3: Developer Registration
-
-1. Navigate to the <a href="https://dash-devnet.air.fun/" target="_blank" rel="noopener">DEGN Developer Dashboard</a>
-2. Connect your browser wallet to authenticate
-3. Complete the developer profile registration
-4. Generate your API key from the dashboard
-
-Configure your development environment:
-
-```bash
-airmoney-cli setup --user <wallet-address> --key <api-key>
-```
-
-> **Important:** API keys expire after 24 hours for security purposes. You'll need to generate a new key from the dashboard when your current key expires.
-
-## Project Development
-
-### Creating a New Project
-
-The DEGN CLI provides a comprehensive project creation system with multiple options:
-
-```bash
-Usage: airmoney-cli create [options]
-
-Initialize a new project
-
-Options:
-  -N, --name <string>      Project name
-  -n, --network <string>   Network: devnet|mainnet (default: "devnet")
-  -f, --app-path <string>  Path where project will be created
-  --template               Initialize project based on git quickstart template
-  -h, --help               Display help for command
-```
-
-#### Quick Start with Template
-
-For rapid development, use our pre-configured template:
+**2. Create a New Project:**
 
 ```bash
 airmoney-cli create -N my-awesome-dapp --template
 ```
+- `-N` Your project name
+- `--template` Use the official quickstart template
 
-This command will:
-
-- Clone the official quickstart repository
-- Set up the project structure
-- Install necessary dependencies
-- Configure build tools
+See [DEGN CLI — Create Command](/degn-cli#create-command) for all options.
 
 **Additional Resources:**
 Check out community repos for additional templates and examples:
 - <a href="https://github.com/cream-hub/degn-template" target="_blank" rel="noopener">degn-template</a>
 
-#### Project Configuration
-
-After project creation, update the `metadata.json` file with your application details:
-
-```json
-{
-  "name": "my-awesome-dapp",
-  "displayName": "My Awesome dApp",
-  "identifier": "com.yourcompany.my-awesome-dapp",
-  "author": "Your Name",
-  "maintainer": "Your Name",
-  "url": "https://github.com/yourusername/my-awesome-dapp",
-  "themeColor": "#C4C4C4",
-  "version": "0.1.0",
-  "whatsNew": "Initial release",
-  "buildNumber": "1",
-  "commitHash": "",
-  "buildDate": ""
-}
-```
-
-**Key Configuration Fields:**
-
-- `name`: Application name
-- `displayName`: User-facing name in the dApp store
-- `identifier`: Must be unique across the platform (reverse domain notation recommended)
-- `author`: Developer name
-- `maintainer`: Maintainer name
-- `url`: Project URL
-- `themeColor`: Primary color for your application's theme
-- `version`: Semantic versioning (e.g., 1.0.0)
-- `whatsNew`: Description of what's new in this version
-- `buildNumber`: Build number for this release
-- `commitHash`: Git commit hash
-- `buildDate`: Build date
-
-## Development Workflow
-
-### Development Tools
-
-**Controller SDK**
-The DEGN Controller SDK provides TypeScript APIs for device control and blockchain operations:
+**3. Develop Your DEGN App:**
 
 ```bash
-npm install @airmoney-degn/controller-sdk
+cd my-awesome-dapp #Go to your root project
+npm install #Installs project dependencies
+npm run dev #Starts the dev server with HMR (default Vite port
 ```
 
-Key features:
-- Device screen control and image display
-- Cryptographic operations (EVM, Solana, Bitcoin)
-- Key event handling and button management
-- Utility functions for navigation and validation
-
-**React UI Library**
-A comprehensive React UI library with pre-built components and hooks:
+In a new terminal, run the DEGN simulator and connect to your dev server:
 
 ```bash
-npm install @airmoney-degn/react-ui
+airmoney-cli serve --app-url http://localhost:5173
 ```
 
-Key features:
-- Pre-built UI components (Keyboard, Layout, Forms)
-- Custom hooks for device integration
-- State management utilities
-- Tailwind CSS styling with custom theming
+This will:
+- Start the DEGN simulator in your browser
+- Serve your app locally for fast development and feedback
 
-### Wallet Interactions
+See [DEGN CLI — Serve Command](/degn-cli#serve-command) for all options.
 
-For applications that need to interact with wallets (generate, sign transactions, etc.), you can direct users to the native account app on the device:
+**4. Build and Preview Your DEGN App:**
+
+After development, build your app for production:
+
+```bash
+npm run build #Bundles your app for deployment on DEGN hardware
+```
+- `npm run build`
+
+Preview your production build in the simulator:
+
+```bash
+airmoney-cli serve -f dist # Loads the built app from the dist directory
+```
+- `-f dist` 
+
+See [DEGN CLI — Serve Command](/degn-cli#serve-command) for all options.
+
+**5. Publish Your DEGN App:**
+
+When you're ready, publish your app to the DEGN Store:
+
+```bash
+airmoney-cli upload -f dist # Uploads your production build
+```
+
+See [DEGN CLI — Upload Command](/degn-cli#upload-command) for all options.
+
+**6. Register and Submit on the Developer Dashboard:**
+
+After uploading:
+1. Go to the [Developer Dashboard](https://dash-devnet.air.fun/)
+2. Locate your submitted package
+3. Complete the store listing and category
+4. Click Register Dapp and Sign/Submit
+
+Your app will be reviewed by the DEGN team before publishing.
+
+## Development Tools
+
+**Controller SDK**  
+TypeScript library for device control and blockchain features.  
+See [Controller SDK documentation](/controller-sdk) for usage details.
+
+**React UI Library**  
+Ready-made React components and utilities for building DEGN apps.  
+See [React UI documentation](/react-ui-library) for more information.
+
+## API Reference
+
+**DEGN Service API**  
+APIs for interacting with the DEGN platform and services.  
+See [DEGN Service API documentation](/degn-service-api) for details.
+
+**Crypto Service API**  
+APIs for cryptography, key management, and blockchain integration.  
+See [Crypto Service API documentation](/crypto-service-api) for details.
+
+## Wallet Interaction
+
+For applications that need to interact with wallets (generate, sign 
+transactions, etc.), you can direct users to the native account app 
+on the device:
 
 ```typescript
 import { goToApp } from '@airmoney-degn/controller-sdk';
@@ -171,126 +156,13 @@ import { goToApp } from '@airmoney-degn/controller-sdk';
 goToApp('account-app');
 ```
 
-The account app is a native application on the DEGN device that provides:
+The account app is a native application on the DEGN device that 
+provides:
 - Wallet generation and management
 - Transaction signing
 - Address management
 - Security features
 
-This approach ensures users can perform wallet operations using the device's secure native interface.
+This approach ensures users can perform wallet operations using the 
+device's secure native interface.
 
-### Building Your Application
-
-1. Install project dependencies:
-
-   ```bash
-   npm install
-   ```
-
-2. Build your application:
-   ```bash
-   npm run build
-   ```
-
-The build process compiles and bundles your application into a single HTML file, optimized for the DEGN hardware platform. The output is stored in the `dist` directory.
-
-#### Expected Output Structure
-
-After building your application, the `dist` directory should contain at minimum the following structure:
-
-```
-dist/
-├── assets/           # Static assets (CSS, JS, images, button images)
-├── dapp-logo.png     # Application logo/icon
-├── index.html        # Main application file
-└── metadata.json     # Application metadata
-```
-
-**Required Files:**
-
-- `index.html`: Your compiled application - this is the main entry point
-- `metadata.json`: Contains application configuration and metadata
-- `dapp-logo.png`: Your application's icon (recommended size: 512x512px)
-- `assets/`: Directory containing all bundled CSS, JavaScript, static resources, and button images for the simulator
-
-> **Note:** This structure shows the minimum required files. Your application folder can contain additional files and directories as needed for your specific dApp functionality.
-
-### Local Development with Simulator
-
-The DEGN Simulator is a powerful development tool that replicates the hardware device behavior in your browser, enabling rapid iteration and testing.
-
-#### Development Setup
-
-For active development with Hot Module Replacement (HMR), use the `--app-url` option:
-
-```bash
-airmoney-cli serve -u http://localhost:5173
-```
-
-#### Preview your app
-
-Preview your built application in the simulator:
-
-```bash
-airmoney-cli serve -f dist
-```
-
-**Important:** When using HMR, configure your development server to use a specific port to avoid conflicts with the simulator's WebSocket connection.
-
-For the full simulator key mappings and shortcuts, see the DEGN CLI page under Serve Command:
-
-- [DEGN CLI — Serve Command](/degn-cli#serve-command)
-
-Example Vite configuration:
-
-```javascript
-export default {
-  server: {
-    hmr: { port: 5173 },
-  },
-};
-```
-
-#### Simulator Command Reference
-
-```bash
-Usage: airmoney-cli serve [options]
-
-Serve locally in the simulator
-
-Options:
-  -f, --index-app-path <string>  Path for the index.html (default: "./")
-  --no-browser                   Prevent browser from opening automatically
-  -u, --app-url <string>         URL where the app is running (for HMR)
-  -h, --help                     Display help for command
-```
-
-> **Current Limitations:** The simulator focuses on UI/UX simulation including screen displays and button interactions. Hardware-specific features like camera, fingerprint sensor, and NFC are not yet implemented but are planned for future releases.
-
-## Publishing Your dApp
-
-### Submission Process
-
-Once your application is built and tested, submit it to the DEGN dApp Store:
-
-```bash
-npm run upload
-```
-
-Or using the CLI directly:
-
-```bash
-airmoney-cli upload -f dist
-```
-
-### Store Registration
-
-After successful submission, complete the store listing:
-
-1. Navigate to the <a href="https://dash-devnet.air.fun/" target="_blank" rel="noopener">Developer Dashboard</a>
-2. Locate your submitted package
-3. Select the appropriate category for your dApp
-4. Click **Register Dapp** to create the store listing
-5. Review and click **Sign and Submit** to finalize the submission
-
-Your dApp will be reviewed by the DEGN team before being published to the store.
