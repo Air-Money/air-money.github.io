@@ -191,11 +191,15 @@ airmoney-cli serve [-f <path>] [--no-browser] [-u <url>]
 **Simulator Controls:**
 - `←` (Left Arrow) - Left button
 - `→` (Right Arrow) - Right button  
-- `↑` (Up Arrow, hold) - Balance button
+- `↑` (Up Arrow) - Balance button
 - `↓` (Down Arrow) - Mute toggle
 - `Enter` - Rotary knob press
 - `[` - Clockwise rotary rotation
 - `]` - Counter-clockwise rotary rotation
+
+**Navigation Shortcuts:**
+- `←` + `→` - Back
+- `↑` + `←` + `→` - Go to device home
 
 ### Upload Command
 

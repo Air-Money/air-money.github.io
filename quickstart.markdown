@@ -237,14 +237,9 @@ airmoney-cli serve -f dist
 
 **Important:** When using HMR, configure your development server to use a specific port to avoid conflicts with the simulator's WebSocket connection.
 
-**Simulator Controls:**
-- `←` (Left Arrow) - Left button
-- `→` (Right Arrow) - Right button  
-- `↑` (Up Arrow, hold) - Balance button
-- `↓` (Down Arrow) - Mute toggle
-- `Enter` - Rotary knob press
-- `[` - Clockwise rotary rotation
-- `]` - Counter-clockwise rotary rotation
+For the full simulator key mappings and shortcuts, see the DEGN CLI page under Serve Command:
+
+- [DEGN CLI — Serve Command](/degn-cli#serve-command)
 
 Example Vite configuration:
 
