@@ -2,12 +2,12 @@
 layout: default
 title: Quickstart Guide
 nav_order: 1
-description: Get started with Airmoney development in minutes
+description: Get started with DEGN development in minutes
 ---
 
-# Airmoney Quickstart Guide
+# DEGN Quickstart Guide
 
-Welcome to the Airmoney development platform! This comprehensive guide will walk you through creating and publishing your first decentralized application (dApp) on the Airmoney ecosystem.
+Welcome to the DEGN development platform! This comprehensive guide will walk you through creating and publishing your first decentralized application (dApp) on the DEGN ecosystem.
 
 ## Prerequisites
 
@@ -21,15 +21,15 @@ Before you begin, ensure you have the following tools installed:
 
 ### Step 1: Request Developer Access
 
-To access the Airmoney development platform, you'll need to be whitelisted:
+To access the DEGN development platform, you'll need to be whitelisted:
 
-1. Contact the Airmoney team through our official channels
+1. Contact the DEGN team through our official channels
 2. Provide your Solana wallet address for whitelist verification
 3. Wait for confirmation of your developer access
 
-### Step 2: Install the Airmoney CLI
+### Step 2: Install the DEGN CLI
 
-Install the official Airmoney command-line interface globally:
+Install the official DEGN command-line interface globally:
 
 ```bash
 npm install -g @airmoney-degn/airmoney-cli
@@ -43,7 +43,7 @@ airmoney-cli --version
 
 ### Step 3: Developer Registration
 
-1. Navigate to the <a href="https://dash-devnet.air.fun/" target="_blank" rel="noopener">Airmoney Developer Dashboard</a>
+1. Navigate to the <a href="https://dash-devnet.air.fun/" target="_blank" rel="noopener">DEGN Developer Dashboard</a>
 2. Connect your browser wallet to authenticate
 3. Complete the developer profile registration
 4. Generate your API key from the dashboard
@@ -60,7 +60,7 @@ airmoney-cli setup --user <wallet-address> --key <api-key>
 
 ### Creating a New Project
 
-The Airmoney CLI provides a comprehensive project creation system with multiple options:
+The DEGN CLI provides a comprehensive project creation system with multiple options:
 
 ```bash
 Usage: airmoney-cli create [options]
@@ -192,7 +192,7 @@ This approach ensures users can perform wallet operations using the device's sec
    npm run build
    ```
 
-The build process compiles and bundles your application into a single HTML file, optimized for the Airmoney hardware platform. The output is stored in the `dist` directory.
+The build process compiles and bundles your application into a single HTML file, optimized for the DEGN hardware platform. The output is stored in the `dist` directory.
 
 #### Expected Output Structure
 
@@ -217,7 +217,7 @@ dist/
 
 ### Local Development with Simulator
 
-The Airmoney Simulator is a powerful development tool that replicates the hardware device behavior in your browser, enabling rapid iteration and testing.
+The DEGN Simulator is a powerful development tool that replicates the hardware device behavior in your browser, enabling rapid iteration and testing.
 
 #### Development Setup
 
@@ -271,7 +271,7 @@ Options:
 
 ### Submission Process
 
-Once your application is built and tested, submit it to the Airmoney dApp Store:
+Once your application is built and tested, submit it to the DEGN dApp Store:
 
 ```bash
 npm run upload
@@ -293,4 +293,4 @@ After successful submission, complete the store listing:
 4. Click **Register Dapp** to create the store listing
 5. Review and click **Sign and Submit** to finalize the submission
 
-Your dApp will be reviewed by the Airmoney team before being published to the store.
+Your dApp will be reviewed by the DEGN team before being published to the store.
