@@ -2,8 +2,8 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-title: Air Money Docs
-description: Air Money Docs
+title: DEGN Docs
+description: DEGN Docs
 baseurl: "" # the subpath of your site, e.g. /blog
 
 url: "https://air-money.github.io" # the base hostname & protocol for your site, e.g. http://example.com
