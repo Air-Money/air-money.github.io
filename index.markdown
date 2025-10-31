@@ -15,12 +15,11 @@ Build applications that run on DEGN devices. Create financial apps, payment solu
 
 Get up and running in minutes with our comprehensive quickstart guide:
 
-- **Request Developer Access** - Contact the team to get whitelisted
-- **Install the CLI** - Set up the DEGN command-line interface
-- **Developer Registration** - Complete your profile and get API key
-- **Create Your Project** - Use templates to start building
-- **Build & Test** - Compile your application and test in simulator
-- **Upload to Store** - Publish your dApp to the DEGN store
+- **Create Your Project** - Use templates to start building your dApp
+- **Develop Your App** - Build and test with the simulator
+- **Build & Preview** - Compile your application for production
+- **Publish Your App** - Get credentials and upload to the DEGN store
+- **Register & Submit** - Complete your store listing and submit for review
 
 [Get Started →](quickstart.html){: .btn .btn-primary .btn-lg}
 
