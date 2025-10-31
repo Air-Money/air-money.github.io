@@ -15,7 +15,7 @@ Before you get started, ensure you have:
 
 - **Node.js and npm** – Required for package management and CLI tools
 - **Git** – For version control and template cloning
-- **DEGN CLI** – See <a href="/degn-cli#installation" target="_blank" rel="noopener">installation instructions</a> to install the DEGN CLI on your system.
+- **DEGN CLI** – See [installation instructions](/degn-cli#installation) to install the DEGN CLI on your system.
 
 ---
 
@@ -33,7 +33,7 @@ This command will:
 - Start the dev server
 - Open the simulator with hot reload
 
-For more demo options, see <a href="/degn-cli#demo-command" target="_blank" rel="noopener">DEGN CLI Demo Command</a>.
+For more demo options, see [DEGN CLI Demo Command](/degn-cli#demo-command).
 
 ---
 
@@ -47,7 +47,7 @@ airmoney-cli create -N my-awesome-dapp --template
 - `-N` Your project name
 - `--template` Use the official quickstart template
 
-See <a href="/degn-cli#create-command" target="_blank" rel="noopener">DEGN CLI — Create Command</a> for all options.
+See [DEGN CLI — Create Command](/degn-cli#create-command) for all options.
 
 **Additional resources:**
 Check out community repos for additional templates and examples:
@@ -71,7 +71,7 @@ This will:
 - Start the DEGN simulator in your browser
 - Serve your app locally for fast development and feedback
 
-See <a href="/degn-cli#serve-command" target="_blank" rel="noopener">DEGN CLI — Serve Command</a> for all options.
+See [DEGN CLI — Serve Command](/degn-cli#serve-command) for all options.
 
 **3. Build and preview your DEGN app:**
 
@@ -87,7 +87,7 @@ Preview your production build in the simulator:
 airmoney-cli serve -f dist # Loads the built app from the dist directory
 ```
 
-See <a href="/degn-cli#serve-command" target="_blank" rel="noopener">DEGN CLI — Serve Command</a> for all options.
+See [DEGN CLI — Serve Command](/degn-cli#serve-command) for all options.
 
 **5. Publish your DEGN app:**
 
@@ -99,7 +99,7 @@ airmoney-cli setup -u YOUR_WALLET_ADDRESS -k YOUR_API_KEY
 - `-u` Your wallet address
 - `-k` Your API key
 
-See <a href="/degn-cli#setup-command" target="_blank" rel="noopener">DEGN CLI — Setup Command</a> for all options.
+See [DEGN CLI — Setup Command](/degn-cli#setup-command) for all options.
 
 When you're ready, publish your app to the DEGN Store:
 
@@ -107,7 +107,7 @@ When you're ready, publish your app to the DEGN Store:
 airmoney-cli upload -f dist # Uploads your production build
 ```
 
-See <a href="/degn-cli#upload-command" target="_blank" rel="noopener">DEGN CLI — Upload Command</a> for all options.
+See [DEGN CLI — Upload Command](/degn-cli#upload-command) for all options.
 
 **6. Register and submit on the developer dashboard:**
 
@@ -123,21 +123,21 @@ Your app will be reviewed by the DEGN team before publishing.
 
 **Controller SDK**  
 TypeScript library for device control and blockchain features.  
-See <a href="/controller-sdk" target="_blank" rel="noopener">Controller SDK documentation</a> for usage details.
+See [Controller SDK documentation](/controller-sdk) for usage details.
 
 **React UI Library**  
 Ready-made React components and utilities for building DEGN apps.  
-See <a href="/react-ui-library" target="_blank" rel="noopener">React UI documentation</a> for more information.
+See [React UI documentation](/react-ui-library) for more information.
 
 ## API Reference
 
 **DEGN Service API**  
 APIs for interacting with the DEGN platform and services.  
-See <a href="/degn-service-api" target="_blank" rel="noopener">DEGN Service API documentation</a> for details.
+See [DEGN Service API documentation](/degn-service-api) for details.
 
 **Crypto Service API**  
 APIs for cryptography, key management, and blockchain integration.  
-See <a href="/crypto-service-api" target="_blank" rel="noopener">Crypto Service API documentation</a> for details.
+See [Crypto Service API documentation](/crypto-service-api) for details.
 
 ## Wallet Interaction
 
