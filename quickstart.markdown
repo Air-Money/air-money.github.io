@@ -39,19 +39,7 @@ For more demo options, see <a href="/degn-cli#demo-command" target="_blank" rel=
 
 ## Getting Started
 
-**1. Developer Setup:**
-
-Get your developer credentials from the <a href="https://dash-devnet.air.fun/" target="_blank" rel="noopener">DEGN Developer Dashboard</a>, then run:
-
-```bash
-airmoney-cli setup -u YOUR_WALLET_ADDRESS -k YOUR_API_KEY
-```
-- `-u` Your wallet address
-- `-k` Your API key
-
-See <a href="/degn-cli#setup-command" target="_blank" rel="noopener">DEGN CLI — Setup Command</a> for all options.
-
-**2. Create a New Project:**
+**1. Create a new project:**
 
 ```bash
 airmoney-cli create -N my-awesome-dapp --template
@@ -61,11 +49,11 @@ airmoney-cli create -N my-awesome-dapp --template
 
 See <a href="/degn-cli#create-command" target="_blank" rel="noopener">DEGN CLI — Create Command</a> for all options.
 
-**Additional Resources:**
+**Additional resources:**
 Check out community repos for additional templates and examples:
 - <a href="https://github.com/cream-hub/degn-template" target="_blank" rel="noopener">degn-template</a>
 
-**3. Develop Your DEGN App:**
+**2. Develop your DEGN app:**
 
 ```bash
 cd my-awesome-dapp #Go to your root project
@@ -85,7 +73,7 @@ This will:
 
 See <a href="/degn-cli#serve-command" target="_blank" rel="noopener">DEGN CLI — Serve Command</a> for all options.
 
-**4. Build and Preview Your DEGN App:**
+**3. Build and preview your DEGN app:**
 
 After development, build your app for production:
 
@@ -101,7 +89,17 @@ airmoney-cli serve -f dist # Loads the built app from the dist directory
 
 See <a href="/degn-cli#serve-command" target="_blank" rel="noopener">DEGN CLI — Serve Command</a> for all options.
 
-**5. Publish Your DEGN App:**
+**5. Publish your DEGN app:**
+
+Get your developer credentials from the <a href="https://dash-devnet.degn.com/" target="_blank" rel="noopener">DEGN Developer Dashboard</a>, then run:
+
+```bash
+airmoney-cli setup -u YOUR_WALLET_ADDRESS -k YOUR_API_KEY
+```
+- `-u` Your wallet address
+- `-k` Your API key
+
+See <a href="/degn-cli#setup-command" target="_blank" rel="noopener">DEGN CLI — Setup Command</a> for all options.
 
 When you're ready, publish your app to the DEGN Store:
 
@@ -111,13 +109,13 @@ airmoney-cli upload -f dist # Uploads your production build
 
 See <a href="/degn-cli#upload-command" target="_blank" rel="noopener">DEGN CLI — Upload Command</a> for all options.
 
-**6. Register and Submit on the Developer Dashboard:**
+**6. Register and submit on the developer dashboard:**
 
 After uploading:
-1. Go to the <a href="https://dash-devnet.air.fun/" target="_blank" rel="noopener">Developer Dashboard</a>
+1. Go to the <a href="https://dash-devnet.degn.com/" target="_blank" rel="noopener">Developer Dashboard</a>
 2. Locate your submitted package
-3. Complete the store listing and category
-4. Click Register Dapp and Sign/Submit
+3. Complete the category
+4. Click `Register Dapp` and `Sign & Submit`
 
 Your app will be reviewed by the DEGN team before publishing.
 
