@@ -5,7 +5,7 @@ title: DEGN Docs
 description: DEGN Docs
 baseurl: "" # the subpath of your site, e.g. /blog
 
-url: "https://air-money.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://airmoney-degn.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: ""
 
 # Theme
