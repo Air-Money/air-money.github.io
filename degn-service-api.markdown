@@ -34,7 +34,7 @@ Display static images on device screens.
 {
   "jsonrpc": "2.0",
   "method": "setImage",
-  "params": ["app-name/assets/images/welcome.png", "left"],
+  "params": ["my-awesome-dapp/path/to/image.png", "left"],
   "id": "1703123456789"
 }
 ```
@@ -52,7 +52,7 @@ Display static images on device screens.
 ```
 
 **Parameters**:
-- `imagePath`: Full path to image relative to app assets (`app-name/assets/path/to/image.png`)
+- `imagePath`: Full path to image. Format: `{app-name}/{path/to/image}` where `{app-name}` must match the `name` field in your `metadata.json` file (e.g., `my-awesome-dapp/images/welcome.png`)
 - `screen`: Screen identifier (`"left"` or `"right"`)
 
 ## Display Animations
@@ -66,7 +66,7 @@ Display animated GIFs on device screens.
 {
   "jsonrpc": "2.0",
   "method": "setAnimate",
-  "params": ["app-name/assets/animations/loading.gif", "right"],
+  "params": ["my-awesome-dapp/path/to/image.gif", "right"],
   "id": "1703123456790"
 }
 ```
@@ -82,6 +82,10 @@ Display animated GIFs on device screens.
   }
 }
 ```
+
+**Parameters**:
+- `imagePath`: Full path to image. Format: `{app-name}/{path/to/image}` where `{app-name}` must match the `name` field in your `metadata.json` file (e.g., `my-awesome-dapp/images/welcome.gif`)
+- `screen`: Screen identifier (`"left"` or `"right"`)
 
 ## Error Handling
 

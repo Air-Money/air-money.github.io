@@ -83,9 +83,8 @@ airmoney-cli create -N <project-name> [-f <path>] [--template]
 my-dapp/
 ├── index.html          # Main app file
 ├── metadata.json       # Project configuration
-└── assets/            # Static assets folder
-    ├── main.js        # JavaScript code
-    └── style.css      # Styling
+├── dapp-logo.jpng       # App logo
+└── ...
 ```
 
 **Project Configuration (metadata.json):**
@@ -169,7 +168,6 @@ airmoney-cli upload [-n <network-endpoint>] [-f <path>] [-i <button-images>]
 **Options:**
 - `-n, --network <string>` - Network endpoint (default: `https://rpc-dev.air.fun`)
 - `-f, --index-app-path <string>` - Path to your app files (default: `./`)
-- `-i, --button-image <string>` - Path to button images (default: `assets`)
 
 **What it does:**
 - Packages your dApp into a distributable format

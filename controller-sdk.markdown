@@ -41,8 +41,10 @@ The SDK will use the `name` field from this file to identify your application wh
 If the `/metadata.json` file is not available (e.g., in development environments), you can set the app identifier directly on the window object:
 
 ```typescript
-window.AIRMONEY_APP_ID = 'your-app-name'; // Must match the name field in metadata.json
+window.AIRMONEY_APP_ID = 'my-awesome-dapp'; // Must match exactly the 'name' field in metadata.json
 ```
+
+> **Important:** The value you set here must match **exactly** the `name` field from your `metadata.json` file. Replace `'my-awesome-dapp'` with your actual app name from `metadata.json`.
 
 ### How it Works
 
@@ -80,7 +82,7 @@ const airMoneyService = new AirMoneyService({
 
 #### Display Images
 
-Display static images on device screens. The `imageName` parameter should be the path to the image relative to the `/assets` directory:
+Display static images on device screens. The `imageName` parameter should be the path to the image relative to the root directory:
 
 ```typescript
 import { AMServiceScreen } from '@airmoney-degn/controller-sdk';
@@ -88,31 +90,31 @@ import { AMServiceScreen } from '@airmoney-degn/controller-sdk';
 // Display an image on the left screen
 await airMoneyService.setImage({
   id: AMServiceScreen.Left,
-  imageName: 'images/welcome-screen.png' // Path relative to /assets
+  imageName: 'path/to/welcome-screen.png' // Path relative to root directory
 });
 
 // Display an image on the right screen
 await airMoneyService.setImage({
   id: AMServiceScreen.Right,
-  imageName: 'icons/status-icon.png' // Path relative to /assets
+  imageName: 'path/to/status-icon.png' // Path relative to root directory
 });
 ```
 
 #### Display Animations
 
-Display animated GIFs on device screens. The `imageName` parameter should be the path to the animation relative to the `/assets` directory:
+Display animated GIFs on device screens. The `imageName` parameter should be the path to the animation relative to the root directory:
 
 ```typescript
 // Display a loading animation
 await airMoneyService.setAnimate({
   id: AMServiceScreen.Left,
-  imageName: 'animations/loading-spinner.gif' // Path relative to /assets
+  imageName: 'path/to/loading-spinner.gif' // Path relative to root
 });
 
 // Display a success animation
 await airMoneyService.setAnimate({
   id: AMServiceScreen.Right,
-  imageName: 'animations/success-checkmark.gif' // Path relative to /assets
+  imageName: 'path/to/success-checkmark.gif' // Path relative to root
 });
 ```
 
@@ -399,8 +401,8 @@ try {
 
 | Method | Description | Parameters |
 |--------|-------------|------------|
-| `setImage(params)` | Display static image | `{ id: AMServiceScreen.Left \| AMServiceScreen.Right, imageName: string }` (path relative to /assets) |
-| `setAnimate(params)` | Display animated GIF | `{ id: AMServiceScreen.Left \| AMServiceScreen.Right, imageName: string }` (path relative to /assets) |
+| `setImage(params)` | Display static image | `{ id: AMServiceScreen.Left \| AMServiceScreen.Right, imageName: string }` (path relative to root) |
+| `setAnimate(params)` | Display animated GIF | `{ id: AMServiceScreen.Left \| AMServiceScreen.Right, imageName: string }` (path relative to root) |
 
 ### AirMoneyCryptoService Methods
 
